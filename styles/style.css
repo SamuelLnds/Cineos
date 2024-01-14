@@ -1,0 +1,298 @@
+/* Corps de la page */
+
+@import url("https://use.typekit.net/khq8zsk.css");
+
+:root {
+    --main-blue: #022873;
+    --sec-blue: #0179ff;
+    --orange: #bf8400;
+    --yellow: #e7c402;
+    --black: #010c22;
+    --white: #f1f1f1;
+}
+
+*:visited {
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: var(--black);
+    position: relative;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: flex-start;
+}
+
+header img[alt="Cinéos"] {
+    width: auto;
+    height: 150px;
+}
+
+header svg {
+    width: 30px;
+    height: auto;
+    stroke: 1px solid var(--black);
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+
+
+/* Footer */
+
+footer {
+    font-family:"roboto-slab";
+    font-weight: 300;
+    font-stretch:normal;
+    font-style: normal;
+}
+
+.top-line {
+    background-color: var(--yellow);
+    font-size: 12px;
+}
+
+.bot-line {
+    background-color: white;
+    font-size: 10px;
+    text-align: center;
+    padding: 0.25rem 0;
+    color: var(--black);
+}
+
+.bot-line a {
+    text-decoration: none;
+}
+
+footer svg {
+    width: 20px;
+    height: auto;
+}
+
+footer input {
+    min-height: 16px;
+    min-width: 140px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 0.5rem;
+    font-size: 8px;
+}
+
+footer input::placeholder {
+    font-size: 8px;
+}
+
+footer button {
+    font-size: 12px;
+    min-width: 50px;
+    min-height: 16px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--main-blue);
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.top-line p {
+    font-size: 8px;
+}
+
+.newsletter-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reseaux {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.reseaux svg {
+    width: 30px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.error-message {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%, -125%);
+}
+
+.left-side p {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.confirm-message {
+    position: absolute;
+    background-color: rgba(13, 255, 0, 0.4);
+    color: white;
+    text-align: center;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%, -125%);
+}
+
+/* Le switch */
+
+#settingsCog {
+    transition: transform 1s ease-in;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--yellow);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--main-blue);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--main-blue);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .switch-component {
+    position: absolute;
+    top: 10vh;
+    right: 15vw;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .overlay {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.5);
+
+    z-index: 50;
+
+  }
+
+  .hiddenMenu {
+    position:absolute;
+    padding:0;
+    margin:0;
+    border-bottom-left-radius: 5000px;
+
+    top:0;
+    right:0;
+
+    width: 35%;
+    height: 250px;
+    background:rgba(255,255,255,0.55);
+
+    z-index: 55;
+  }
+
+  .hiddenMenuOverlay {
+    display: none;
+  }
+
+.switch-icon {
+    visibility: hidden;
+}
+
+  .show {
+    display: block;
+  }
+
+  .visible {
+    visibility: visible;
+  }

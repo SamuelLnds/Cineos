@@ -1,0 +1,115 @@
+@media screen and (max-width: 300px) {
+    
+    * {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+
+    .headerContainer {
+        padding: 0 3rem;
+    }
+
+    #films_tendance {
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+    }
+
+    header img[alt="Cinéos"] {
+        width: auto;
+        height: 250px;
+    }
+
+    header svg {
+        width: 40px;
+        height: auto;
+    }
+
+    .CTA-left-column {
+        max-width:275px;
+    }
+
+    .CTA-left-column p {
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .CTA-left-column button {
+        font-size: 24px;
+        line-height: 24px;
+        border-radius: 20px;
+        border: 0;
+        padding: 1rem;
+    }
+
+    form[action="reservation.php"] {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form[action="reservation.php"] input {
+        font-size: 20px !important;
+    }
+
+    form[action="reservation.php"] label {
+        font-size: 16px !important;
+    }
+
+    .verif-secu input {
+        width: 200px;
+        font-size: 8px !important;
+      }
+
+    .top-line {
+        font-size: 18px;
+    }
+
+    .bot-line {
+        font-size: 16px;
+    }
+
+    .left-side p {
+        font-size: 16px;
+    }
+
+    footer input {
+        min-height: 20px;
+        min-width: 280px;
+        margin-bottom: 0;
+    }
+
+    footer input::placeholder {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: var(--white);
+    }
+
+    .top-line {
+        justify-content: space-evenly;
+    }
+
+    .header_accordion {
+        font-size: 24px;
+    }
+
+    .accordion_element {
+        min-width: 150px;
+        max-width: 200px;
+    }
+
+    .content_accordion {
+        font-size: 16px;
+    }
+
+
+}

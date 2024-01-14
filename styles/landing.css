@@ -1,0 +1,254 @@
+/* Page */
+
+    section {
+        margin: 3rem 0;
+    }
+
+    header {
+        background-image: url("../design/phone head image v2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--black);
+        aspect-ratio: 16/11;
+    }
+
+/* Accordéons */
+
+.header_accordion {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0;
+
+}
+
+.header_accordion:hover {
+    cursor: pointer;
+}
+
+.content_accordion {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    height: 0;
+    overflow: hidden;
+    margin-top: 0.25rem;
+    transition: height 0.3s ease-in-out;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem 0.5rem;
+    gap: 1rem;
+}
+
+.accordion_element {
+    max-width: 150px;
+
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.accordion svg {
+    width: 30px;
+    height: auto;
+}
+
+/* CTA  */
+
+    .CTA-reservation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--white);
+    }
+
+   strong {
+        font-weight: normal;
+        color: var(--sec-blue);
+    }
+
+    .CTA-reservation img {
+        max-width: 50%;
+        height: auto;
+        flex-grow: 1;
+    }
+
+    .CTA-left-column {
+        max-width: 115px;
+        font-family: 'Heebo';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    .CTA-left-column button {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 10px;
+        border: 0;
+        color: var(--main-blue);
+        background-color: var(--yellow);
+    }
+
+    .CTA-left-column button:hover {
+        cursor: pointer;
+    }
+
+    .CTA-left-column button:active {
+        transform: scale(98%);
+    }
+
+/* Carrousel */
+
+h2 /*Définis le style pour titre film affiche aussi*/ {
+    font-family:"trade-gothic-next-condensed";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: var(--white);
+}
+
+#carrousel_images {
+    height: 180px;
+    box-sizing: border-box;
+    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    display: flex;
+    overflow-X: hidden;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 1rem;
+}
+
+#carrousel_images::-webkit-scrollbar {
+    display: none;
+  }
+  
+#carrousel_images {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+#carrousel_images img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+#carrousel_images:hover {
+    cursor: grab;
+}
+
+#carrousel_images:active {
+    cursor: grabbing;
+}
+
+#carrousel_images .carrousel-img {
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+
+
+  .card img {
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.slider-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+    background-color: #f1f1f125;
+    margin-top: 2rem;
+}
+.inner-slider {
+    width: 150vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Les films à l'affiche */
+
+#films_tendance {
+    display: flex;
+    height: 150px;
+    position: relative;
+  }
+  
+  #films_tendance img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    position: absolute;
+    transition: all 0.3s ease; 
+  }
+  
+  #pos1 {
+    z-index: 1;
+    left: 10%; 
+  }
+  
+  #pos2 {
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #pos3 {
+    z-index: 3;
+    right: 10%; 
+  }
+  
+  #pos1:hover, #pos3:hover {
+    z-index: 4;
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  #pos2:hover {
+    z-index: 4;
+    transform: scale(1.1) translateY(-50%) translateX(-50%);
+  }
